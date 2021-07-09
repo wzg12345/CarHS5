@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+   
+   
+   var deviceWidth = document.documentElement.clientWidth;
+   document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+   
+   var deviceWidth = document.documentElement.clientWidth;
+			if(deviceWidth > 640){deviceWidth = 640}
+			document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';	
+*/
+
+@charset "utf-8";
+
+body {
+	line-height: normal;
+	font-size: .16rem;
+	margin: 0 auto;
+	font-family: "Adobe blackbody STD;","Microsoft YaHei", Arial, Helvetica, sans-serif;
+	/* max-width: 640px; */
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+body,
+html {
+	min-height: 100%;
+}
+
+body,
+input,
+button,
+textarea,
+select,
+option,
+label {
+	font-family: Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", \5B8B\4F53, \5FAE\8F6F\96C5\9ED1, \9ED1\4F53, sans-self;
+	color: white;
+}
+
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	font-style: normal;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+input,
+button,
+textarea,
+select,
+option {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	border-radius: 0;
+}
+
+nav,
+ul,
+ol {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: none;
+}
+
+
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+mark {
+	background: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	margin: .1rem 0;
+	padding: 0;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	color: #555;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+img {
+	display: block;
+	height: auto;
+	border: none;
+	width: 100%;
+/* 	pointer-events: none;
+	vertical-align: sub; */
+}
+
+.clear {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearFix::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.fx1 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
