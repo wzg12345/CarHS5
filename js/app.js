@@ -13,42 +13,33 @@ Vue.prototype.GLOBAL = {
 	token, //用户token身份
 	serverSrc, //服务器地址
 	hasEnter, //用户登录状态
-}
+};
 Vue.use(httpVueLoader); //使用http-vue-loader来运行.vue格式的文件
+
+
+
 // Vue.use(VueRouter); //使用VueRouter
-var app = new Vue({
-	el: '#app',
-	data: {},
-	components: {
-		'hello-word': 'url:./components/HelloWord.vue',
-	},
-	created() {
 
-	},
-	mounted: function() {
-		const _this = this;
-		// axios.post(`${_this.GLOBAL.serverSrc}/screen/index/num`, {
+// 2. 定义路由
+// 每个路由应该映射一个组件。 其中"component" 可以是 通过 Vue.extend()
+//  创建的组件构造器， 或者，只是一个组件配置对象.
+const routes = [
+	{ path: '/', component: httpVueLoader('./components/HelloWord.vue') },
+	{ path: '/manage', component: httpVueLoader('./components/Manage.vue') },
+];
 
-		// 	})
-		// 	.then(function(response) {
+// 3. 创建 router 实例，然后传 `routes` 配置
+const router = new VueRouter({
+	routes // （缩写）相当于 routes: routes
+});
 
-		// 	})
-		// 	.catch(function(error) {
-		// 		console.log(error);
-		// 	});
-	},
-	methods: {
-		Message(msg) {
-			let _this = this;
-			if ($('.modal').length > 0) {
-				$('.modal').remove();
-			}
-			clearTimeout(_this.timeout);
-			let modal_dom = $(`<div  class="modal animated fadeInDown">${msg}</div>`);
-			$('body').append(modal_dom);
-			_this.timeout = setTimeout(() => {
-				$('.modal').fadeOut();
-			}, 1500);
-		},
-	}
-})
+// 4. 创建和挂载根实例。
+// 要通过 router 配置参数注入路由，从而让整个应用都有路由功能
+const app = new Vue({
+	el:'#app',
+	router,
+}).$mount('#app');//el是自动挂载，mount是手动挂载（延时）
+
+
+
+

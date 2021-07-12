@@ -33,18 +33,23 @@
     </script>
 </head>
 <body>
-<div class="app" id="app">
 
-    <hello-word></hello-word>
+<div id="app">
+    <router-link to="/">车型概览</router-link>
+    <router-link to="/manage">快速入门</router-link>
+    <router-view></router-view>
+    <!--<hello-word></hello-word>-->
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/vue-router.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script src="js/http-vue-loader.js"></script>
 <script src="js/axios.js"></script>
 <script src="js/app.js"></script>
+<style>
 
+</style>
 </body>
 </html>
