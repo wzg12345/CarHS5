@@ -24,8 +24,31 @@ Vue.use(httpVueLoader); //使用http-vue-loader来运行.vue格式的文件
 // 每个路由应该映射一个组件。 其中"component" 可以是 通过 Vue.extend()
 //  创建的组件构造器， 或者，只是一个组件配置对象.
 const routes = [
-	{ path: '/', component: httpVueLoader('./components/HelloWord.vue') },
-	{ path: '/manage', component: httpVueLoader('./components/Manage.vue') },
+	//车型概览
+	{
+		path: '/',
+		component: httpVueLoader('./components/overView.vue')
+	},
+	//快速入门
+	{
+		path: '/manage',
+		component: httpVueLoader('./components/Manage.vue')
+	},
+	//车型亮点
+	{
+		path: '/carwindow',
+		component: httpVueLoader('./components/carWindow.vue')
+	},
+	//手册
+	{
+		path: '/handbook',
+		component: httpVueLoader('./components/handBook.vue')
+	},
+	//手册
+	{
+		path: '/search',
+		component: httpVueLoader('./components/search.vue')
+	},
 ];
 
 // 3. 创建 router 实例，然后传 `routes` 配置

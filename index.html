@@ -8,13 +8,14 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
+    <script></script>
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
     <script>
       //	移动式配问题
       (function () {
         // 在标准 1280px 适配下，100px = 1rem;
         var baseFontSize = 100;
-        var baseWidth = 1280;
+        var baseWidth = 1920;
 
         var set = function () {
           var clientWidth = document.documentElement.clientWidth || window.innerWidth;
@@ -35,8 +36,16 @@
 <body>
 
 <div id="app">
-    <router-link to="/">车型概览</router-link>
-    <router-link to="/manage">快速入门</router-link>
+    <div class="head-nav">
+        <img src="img/homeBg.png" alt="" class="head-home">
+        <ul class="nav">
+            <router-link to="/" tag="li">车型概览</router-link>
+            <router-link to="/manage" tag="li">快速入门</router-link>
+            <router-link to="/carwindow" tag="li">车型亮点</router-link>
+            <router-link to="/handbook" tag="li">手册</router-link>
+            <router-link to="/search" tag="li">搜索</router-link>
+        </ul>
+    </div>
     <router-view></router-view>
     <!--<hello-word></hello-word>-->
 </div>
@@ -49,6 +58,29 @@
 <script src="js/axios.js"></script>
 <script src="js/app.js"></script>
 <style>
+    .head-nav {
+        width: 11.63rem;
+        display: flex;
+        height: .71rem;
+        margin: 1.19rem 0 0 .54rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .head-nav > .head-home {
+        width: 0.42rem;
+        height: 0.38rem;
+    }
+    .head-nav > .nav {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 0.42rem - .62rem);
+        height: .71rem;
+    }
+    .head-nav > .nav > li {
+        height: .71rem;
+        line-height: .71rem;
+        font-size: .36rem;
+    }
 
 </style>
 </body>
