@@ -6,25 +6,19 @@ html {
 	overflow: hidden;
 	color: #FFFFFF;
 }
-// @font-face {
-// 	font-family: 'MFFangHei';
-// 	src: url('../fonts/造字工房映力黑规体.otf');
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: 'YOURNAMED7HOMEHALF';
-// 	src: url('../fonts/YOURNAMED7HOMEHALF.TTF');
-// 	font-display: swap;
-// }
 @mixin DisFlex {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
 }
-.app {
+#app {
 	width: 100%;
 	height: 100%;
+	background-image: url("../common/common_bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
 	position: relative;
 	overflow: hidden;
 }
