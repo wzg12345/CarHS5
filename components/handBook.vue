@@ -38,14 +38,14 @@
 
 <script>
     module.default = {
-        name: "Manual",
+        name: "handbook",
     }
 </script>
 
 <style scoped>
     .Manual {
         width: 100%;
-        height: calc(100% - .9rem);
+        height: calc(100% - 1.9rem);
         overflow: hidden;
         position: absolute;
         bottom: 0;
@@ -69,7 +69,7 @@
     .Manual .content .menu {
         width: 19%;
         height: 100%;
-        padding-left: 2%;
+        padding-left: 1.5%;
         float: left;
         overflow-y: scroll;
         -webkit-overflow-scrolling:touch;
@@ -92,7 +92,7 @@
     .Manual .content .menu ul li {
         position: relative;
         font-size: .28rem;
-        line-height: .1rem;
+        line-height: .05rem;
         margin-bottom: .75rem;
         text-indent: .55rem;
     }
@@ -107,7 +107,7 @@
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
-        top: .02rem;
+        top: 0;
         left: .01rem;
     }
     .Manual .content .menu ul li.active {
@@ -131,7 +131,7 @@
     .Manual .content .menu_list {
         width: 81%;
         height: 100%;
-        padding-top: .6rem;
+        padding-top: .43rem;
         float: right;
     }
     .Manual .content .menu_list .list_item {
@@ -149,6 +149,9 @@
     }
     .Manual .content .menu_list .list_item::-webkit-scrollbar-track {
         background: rgba(255,255,255,.2);
+    }
+    .Manual .content .menu_list .list_item .item:last-child ul li:last-child {
+        padding-bottom: .5rem;
     }
     .Manual .content .menu_list .list_item .item h5 {
         color: #bfbfbf;
